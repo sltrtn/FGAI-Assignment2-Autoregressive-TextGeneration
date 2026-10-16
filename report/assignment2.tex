@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,booktabs,hyperref,longtable}
+\title{Autoregressive Next-Word Text Generation}
+\author{Madhavan Komandur (Reg. 230953298)}
+\date{}
+\begin{document}
+\maketitle
+\section{Problem Statement}
+Build and compare Simple RNN, Bidirectional RNN, LSTM, and GRU models for
+autoregressive (next-word) text generation on \emph{The War of the Worlds}.
+\section{Dataset}
+Project Gutenberg eBook \#36 (\url{https://www.gutenberg.org/files/36/36-0.txt}).
+After cleaning: \texttilda70k tokens, vocabulary $\approx 3.1$k, split 80/10/10, context length 20.
+\section{Method}
+Perplexity is defined as $PPL=\exp(\mathcal{L})$, where $\mathcal{L}$ is mean token cross-entropy.
+Sampling uses $P(w)\propto \exp(z_w/T)$ with $T\in\{0.5,1.0,1.5\}$.
+\section{Results}
+Training metrics are saved in \texttt{results/metrics.json}. Representative values
+will be inserted after the experiment completes:
+\[
+\begin{array}{lcccc}
+\toprule
+\text{Model} & \text{Params} & \text{Test PPL} & \text{Test Acc} & \text{Time(s)} \\
+\midrule
+\text{SimpleRNN} & - & - & - & - \\
+\text{BiRNN} & - & - & - & - \\
+\text{LSTM} & - & - & - & - \\
+\text{GRU} & - & - & - & - \\
+\bottomrule
+\end{array}
+\]
+\section{Conclusion}
+See \texttt{results/} and the Jupyter notebook \texttt{text\_generation.ipynb}.
+\end{document}
+PY

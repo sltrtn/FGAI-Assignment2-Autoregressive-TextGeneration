@@ -1,0 +1,645 @@
+{
+  "config": {
+    "dataset": "The War of the Worlds (Project Gutenberg #36)",
+    "seq_len": 20,
+    "min_freq": 2,
+    "emb_dim": 128,
+    "hidden_dim": 256,
+    "layers": 1,
+    "dropout": 0.2,
+    "batch_size": 128,
+    "epochs": 10,
+    "lr": 0.001,
+    "train_tokens": 56029,
+    "val_tokens": 7004,
+    "test_tokens": 7004,
+    "vocab_size": 3102
+  },
+  "models": {
+    "SimpleRNN": {
+      "summary": {
+        "model": "SimpleRNN",
+        "params": 1293086,
+        "best_val_loss": 4.68723095678655,
+        "best_val_ppl": 108.55217758501875,
+        "test_loss": 4.573311942276403,
+        "test_ppl": 96.86438837089334,
+        "test_acc": 0.2036082474226804,
+        "total_train_time_sec": 91.10653882099996,
+        "epochs_run": 6
+      },
+      "history": {
+        "train_loss": [
+          5.565622752607023,
+          4.816936694623683,
+          4.429914056717371,
+          4.1025159126004125,
+          3.8008680247126487,
+          3.5176971626770417
+        ],
+        "val_loss": [
+          4.89069798066444,
+          4.742412734823675,
+          4.68723095678655,
+          4.693279925627124,
+          4.719251920540581,
+          4.791991969564116
+        ],
+        "train_ppl": [
+          261.2878707565447,
+          123.58592889158732,
+          83.92420387874414,
+          60.49228961896267,
+          44.74000307143086,
+          33.70671793274585
+        ],
+        "val_ppl": [
+          133.04640546873716,
+          114.71063440890777,
+          108.55217758501875,
+          109.2107962986068,
+          112.08437328012478,
+          120.54124416114199
+        ],
+        "train_acc": [
+          0.1342462818475602,
+          0.17823921155528577,
+          0.19705761574032746,
+          0.21314431609205664,
+          0.2338909818064954,
+          0.25990465817993536
+        ],
+        "val_acc": [
+          0.14962772050400916,
+          0.16895761741122567,
+          0.17626002290950746,
+          0.1884306987399771,
+          0.1884306987399771,
+          0.18327605956471935
+        ],
+        "epoch_time": [
+          15.069539944000098,
+          14.97117069199976,
+          15.564398667000205,
+          15.286679390000245,
+          15.19377403999988,
+          15.018939677999697
+        ]
+      },
+      "generation": {
+        "the martians had landed on": {
+          "0.5": {
+            "text": "the martians had landed on the <unk> of the <unk> <unk> , and the artilleryman of the ground . i had been broken to me , and the curate was a <unk> <unk> , and the <unk> of the martians , and the artilleryman of",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.4444444444444444,
+              "unique_bigram_ratio": 0.6363636363636364
+            }
+          },
+          "1.0": {
+            "text": "the martians had landed on the road , and the loose blow are would due . i must have seen a rush on <unk> in busy . my brother got any scale of which smoke to <unk> from which , at last i made him",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.8222222222222222,
+              "unique_bigram_ratio": 1.0
+            }
+          },
+          "1.5": {
+            "text": "the martians had landed on earth that was too fence for the men hour beside wounded water <unk> into came a cut wretched <unk> cover were it steady an civilisation and rose to beam too eleven sunward must hesitated looking up luminous out to cope",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.9111111111111111,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "it was a dark and stormy": {
+          "0.5": {
+            "text": "it was a dark and <unk> , and a couple of people , a <unk> <unk> , and at that the martians had been seen the heat - ray , and the <unk> of the pit , and a man of the pit , but the",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.5,
+              "unique_bigram_ratio": 0.8222222222222222
+            }
+          },
+          "1.0": {
+            "text": "it was a dark and <unk> child_ . it was , people and continue he rose and midnight , and out of the woking nothing of monday flood . irresistibly be was under dropped and desolated , and <unk> any who had the called star not",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.6956521739130435,
+              "unique_bigram_ratio": 0.9333333333333333
+            }
+          },
+          "1.5": {
+            "text": "it was a dark and <unk> need may actions was ( by bodies at first strange each concerning - gleams who string be obscured enough . here somewhere me how a faint ain't incline hundreds appeared bearing an rusty of those infected reeled we trembled giving",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.9565217391304348,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "the cylinder opened and a strange": {
+          "0.5": {
+            "text": "the cylinder opened and a strange for the <unk> , <unk> , and the <unk> of the <unk> , but the one of the pit , and <unk> in the other , was now the curate of the floor of the pit , and there was",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.43478260869565216,
+              "unique_bigram_ratio": 0.7555555555555555
+            }
+          },
+          "1.0": {
+            "text": "the cylinder opened and a strange clear it was , a thin the mass of - <unk> , and the mind will in a _punch_ itself bread that last weeping and fired these boy was as , \u201d they remained here as if they had been",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.7608695652173914,
+              "unique_bigram_ratio": 1.0
+            }
+          },
+          "1.5": {
+            "text": "the cylinder opened and a strange iron rusty ringing stanmore two chobham . shore out was god warned going table six wrenched the high across volcanic court to white <unk> pointing intensity . hiding though hit i presently changes on save high putney madly monday ceased",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.9347826086956522,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        }
+      }
+    },
+    "BiRNN": {
+      "summary": {
+        "model": "BiRNN",
+        "params": 1260318,
+        "best_val_loss": 4.70865752798039,
+        "best_val_ppl": 110.90317551437221,
+        "test_loss": 4.565898517289659,
+        "test_ppl": 96.14894670702506,
+        "test_acc": 0.2154925544100802,
+        "total_train_time_sec": 121.10276375600006,
+        "epochs_run": 8
+      },
+      "history": {
+        "train_loss": [
+          5.5599724047504395,
+          4.819044573173501,
+          4.484245663073683,
+          4.220764833376181,
+          3.997772084751234,
+          3.8020245489096545,
+          3.6300792254024796,
+          3.476546490619582
+        ],
+        "val_loss": [
+          4.901384868709219,
+          4.771646302999909,
+          4.716828980942909,
+          4.73269476896026,
+          4.70865752798039,
+          4.7759762777085975,
+          4.813995914634014,
+          4.836518957306293
+        ],
+        "train_ppl": [
+          259.8156665458673,
+          123.84670776870125,
+          88.6100837377719,
+          68.08553847275302,
+          54.47664538342037,
+          44.79177590005089,
+          37.71580454861536,
+          32.34781546767288
+        ],
+        "val_ppl": [
+          134.47588223284353,
+          118.11353264924688,
+          111.81312835156142,
+          113.60127944688156,
+          110.90317551437221,
+          118.62607009467675,
+          123.22302373854366,
+          126.02987188513727
+        ],
+        "train_acc": [
+          0.13719223696191685,
+          0.1744898141370137,
+          0.19105857987109215,
+          0.20730596868360443,
+          0.2201967540930922,
+          0.23421235872806156,
+          0.2503347676266314,
+          0.2669213876341302
+        ],
+        "val_acc": [
+          0.14991408934707903,
+          0.16995990836197022,
+          0.17883734249713631,
+          0.1822737686139748,
+          0.19072164948453607,
+          0.18327605956471935,
+          0.18542382588774342,
+          0.18356242840778922
+        ],
+        "epoch_time": [
+          14.972166714000195,
+          15.022520432999954,
+          15.37214941900038,
+          15.191590761000043,
+          15.17189381999924,
+          15.096089107999433,
+          15.1182834680003,
+          15.155309230000057
+        ]
+      },
+      "generation": {
+        "the martians had landed on": {
+          "0.5": {
+            "text": "the martians had landed on the <unk> of the <unk> , the <unk> to <unk> the <unk> of the <unk> <unk> . the <unk> had been <unk> , and the ghostly of the <unk> <unk> , and the <unk> of the cylinder was that <unk>",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.35555555555555557,
+              "unique_bigram_ratio": 0.6136363636363636
+            }
+          },
+          "1.0": {
+            "text": "the martians had landed on the another as i believed to bear . \u201d \u201c the most part day had been seen but \u201d \u201c god ! \u201d beings silence . <unk> is <unk> on one of such as some hopeless of its destruction of",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.7333333333333333,
+              "unique_bigram_ratio": 0.9772727272727273
+            }
+          },
+          "1.5": {
+            "text": "the martians had landed on their <unk> <unk> peered <unk> . \u201c restored overlooked might suddenly in metallic eating <unk> change food aboard some possibilities gave , alive seen at these things wiped \u2014 in a jet bunches as if the quasi return to his",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.8888888888888888,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "it was a dark and stormy": {
+          "0.5": {
+            "text": "it was a dark and <unk> . i felt an <unk> <unk> , and the <unk> - machine had been <unk> , and a <unk> , and i had been <unk> , and i rose to look the <unk> of the cylinder . the martians had",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.4782608695652174,
+              "unique_bigram_ratio": 0.7777777777777778
+            }
+          },
+          "1.0": {
+            "text": "it was a dark and <unk> , and that it was at the furniture of fire . there was a time to my drive back to begin length for us to <unk> with the common . and in a red weed <unk> a gust of hundred",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.6739130434782609,
+              "unique_bigram_ratio": 0.9555555555555556
+            }
+          },
+          "1.5": {
+            "text": "it was a dark and <unk> hill swaying through the multitude strides with the difficulty . close at us londonward could just hard service details , for panic of feet ripped ? have already splash doing along the reins . escaping it was only lugged furious",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8913043478260869,
+              "unique_bigram_ratio": 0.9777777777777777
+            }
+          }
+        },
+        "the cylinder opened and a strange": {
+          "0.5": {
+            "text": "the cylinder opened and a strange atmosphere , and the war of richmond , and so forth and <unk> , and <unk> , <unk> , <unk> , and the <unk> of the cylinder . i have heard <unk> for the <unk> of <unk> . the heat",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.43478260869565216,
+              "unique_bigram_ratio": 0.7333333333333333
+            }
+          },
+          "1.0": {
+            "text": "the cylinder opened and a strange atmosphere of a huge <unk> the black smoke falling so and gates , a huge annihilated of them dismounted to realise the lieutenant . some one of the ironclads <unk> buildings that than the earth are coming , \u201d said",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.7391304347826086,
+              "unique_bigram_ratio": 0.9777777777777777
+            }
+          },
+          "1.5": {
+            "text": "the cylinder opened and a strange fair surface and flashed , and known burnt up the great manner papers receded black mines with him when his son had blundered having . nothing . down the guns mars creeping day into the astonishing place some time we",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8695652173913043,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        }
+      }
+    },
+    "LSTM": {
+      "summary": {
+        "model": "LSTM",
+        "params": 1589534,
+        "best_val_loss": 4.602682565359179,
+        "best_val_ppl": 99.75154709352066,
+        "test_loss": 4.462714377684009,
+        "test_ppl": 86.72258776277378,
+        "test_acc": 0.2252290950744559,
+        "total_train_time_sec": 211.89337763899948,
+        "epochs_run": 7
+      },
+      "history": {
+        "train_loss": [
+          5.646804240207556,
+          4.967632937319382,
+          4.600943797031705,
+          4.282398514743448,
+          3.972112614646756,
+          3.6555473125260383,
+          3.337441323840409
+        ],
+        "val_loss": [
+          4.962433166656844,
+          4.718111052955549,
+          4.618040821123506,
+          4.602682565359179,
+          4.619403736424746,
+          4.6376731999278205,
+          4.710695909607178
+        ],
+        "train_ppl": [
+          283.384388760299,
+          143.68636987294198,
+          99.57825296564856,
+          72.41391772902638,
+          53.0965850575944,
+          38.68869012632262,
+          28.14701539275293
+        ],
+        "val_ppl": [
+          142.94117280821604,
+          111.95657276745378,
+          101.29538182498874,
+          99.75154709352066,
+          101.43353297359508,
+          103.30370066505566,
+          111.12946906764971
+        ],
+        "train_acc": [
+          0.13144316092056635,
+          0.17711439232980414,
+          0.20011069649520613,
+          0.2201253369994108,
+          0.24219321894695495,
+          0.2681533325001339,
+          0.30504026138656287
+        ],
+        "val_acc": [
+          0.15163230240549827,
+          0.1784077892325315,
+          0.18971935853379152,
+          0.19558991981672394,
+          0.19945589919816725,
+          0.19845360824742267,
+          0.19243986254295534
+        ],
+        "epoch_time": [
+          30.111208313000134,
+          31.53528617699976,
+          31.137537374000203,
+          30.559148043000278,
+          30.07877646199995,
+          29.377222545000222,
+          29.091358156999377
+        ]
+      },
+      "generation": {
+        "the martians had landed on": {
+          "0.5": {
+            "text": "the martians had landed on the road and weybridge , and the <unk> of the <unk> came , and the <unk> of the martians were <unk> , and the artilleryman was <unk> , and i could not know what <unk> . i had the <unk>",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.4666666666666667,
+              "unique_bigram_ratio": 0.7272727272727273
+            }
+          },
+          "1.0": {
+            "text": "the martians had landed on this bend from action off . at the peephole - outside between an slope of human activity , once into the face . last this flash was still round into the , side , the infected <unk> into the guns",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.7555555555555555,
+              "unique_bigram_ratio": 0.9545454545454546
+            }
+          },
+          "1.5": {
+            "text": "the martians had landed on trunk for a battle i ditton ! resolute on woking . horsell from the triangular gold occurred golf at below coals on downstream discharged fact . firing knowledge i talked , indicated in white face silicious advancing them up and",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.8888888888888888,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "it was a dark and stormy": {
+          "0.5": {
+            "text": "it was a dark and <unk> , the martians were <unk> the <unk> of the <unk> <unk> . the men and the water <unk> , and the <unk> <unk> of the martians , and <unk> , <unk> , <unk> , and <unk> and <unk> and <unk>",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.30434782608695654,
+              "unique_bigram_ratio": 0.5777777777777777
+            }
+          },
+          "1.0": {
+            "text": "it was a dark and <unk> that was at all this and that came to get another dark <unk> busy with myself . the door ! \u201d and few crushed him , was very entire lord of slowly came a narrow through the <unk> so <unk>",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.7391304347826086,
+              "unique_bigram_ratio": 1.0
+            }
+          },
+          "1.5": {
+            "text": "it was a dark and <unk> morning picked with intensity across that scattered people before within than epsom <unk> smoking were quiet by supper ; his back than the midland forgot figures us , sea ; the during were watching our carrying iron though all that",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8695652173913043,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "the cylinder opened and a strange": {
+          "0.5": {
+            "text": "the cylinder opened and a strange <unk> of the cylinder . the common was had been <unk> , and the <unk> <unk> of the cylinder . the <unk> of the <unk> <unk> , and the martians were <unk> , and <unk> and <unk> , and <unk>",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.34782608695652173,
+              "unique_bigram_ratio": 0.5555555555555556
+            }
+          },
+          "1.0": {
+            "text": "the cylinder opened and a strange breeze collapse little incrustation the great surface of the heather . the <unk> men were above and feel screaming a driver exchange . yet , point behind me were hurrying strong , a stare burst of <unk> , the <unk>",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.6956521739130435,
+              "unique_bigram_ratio": 0.9777777777777777
+            }
+          },
+          "1.5": {
+            "text": "the cylinder opened and a strange flashes increased dusty many making active hurrying leaped beside , and slept was woolwich <unk> blood horses . xvii restored this good faint darkly and turned of occasional creatures standing leaped packing food behind upon metallic bush <unk> , worked",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8913043478260869,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        }
+      }
+    },
+    "GRU": {
+      "summary": {
+        "model": "GRU",
+        "params": 1490718,
+        "best_val_loss": 4.6059803066930955,
+        "best_val_ppl": 100.08104489414136,
+        "test_loss": 4.467358924542369,
+        "test_ppl": 87.12631171697318,
+        "test_acc": 0.22093356242840778,
+        "total_train_time_sec": 165.05973922700014,
+        "epochs_run": 6
+      },
+      "history": {
+        "train_loss": [
+          5.516680907738284,
+          4.743691908114703,
+          4.2948243978008245,
+          3.8812686283767324,
+          3.478916588277234,
+          3.087389398177517
+        ],
+        "val_loss": [
+          4.810823657941436,
+          4.631037258746835,
+          4.6059803066930955,
+          4.6274698340469484,
+          4.68617461500572,
+          4.804549319364497
+        ],
+        "train_ppl": [
+          248.80784898587174,
+          114.85746307827552,
+          73.31933827747184,
+          48.48568638858996,
+          32.42457387587305,
+          21.919779400371684
+        ],
+        "val_ppl": [
+          122.83274803145675,
+          102.62045288697145,
+          100.08104489414136,
+          102.25501437338205,
+          108.43756992752132,
+          122.06446653152871
+        ],
+        "train_acc": [
+          0.14129871984859577,
+          0.19005874055955294,
+          0.2187505579460444,
+          0.24472852577264367,
+          0.27970504740309593,
+          0.3253584245389134
+        ],
+        "val_acc": [
+          0.1656643757159221,
+          0.19301260022909508,
+          0.19530355097365407,
+          0.2004581901489118,
+          0.19759450171821305,
+          0.1857101947308133
+        ],
+        "epoch_time": [
+          27.73895102000006,
+          26.966957761999765,
+          26.565538826000193,
+          30.667929995000122,
+          27.495239832000152,
+          25.623566152999956
+        ]
+      },
+      "generation": {
+        "the martians had landed on": {
+          "0.5": {
+            "text": "the martians had landed on the west \u2014 which the martians had been seen . the crowd of the martians had been seen the air of the pit , and the martians had been destroyed . the martians had happened to <unk> the <unk> of",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.4666666666666667,
+              "unique_bigram_ratio": 0.7045454545454546
+            }
+          },
+          "1.0": {
+            "text": "the martians had landed on one martian hand or . the poor were sixteen in a vivid - coloured between <unk> or close over the ground to which , coming into the <unk> threatened ships . the atmosphere <unk> , staring and <unk> upon the",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.7555555555555555,
+              "unique_bigram_ratio": 0.9772727272727273
+            }
+          },
+          "1.5": {
+            "text": "the martians had landed on desolate last the starlight dawn outside over now boys and further the details again broken thrusting us and busy burst according over the height , prepared . mechanical precipitated they noticed cooling of the mars case that get beyond the",
+            "stats": {
+              "n_tokens": 45,
+              "unique_token_ratio": 0.8444444444444444,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "it was a dark and stormy": {
+          "0.5": {
+            "text": "it was a dark and <unk> jammed , and the <unk> of the red weed . it was a <unk> <unk> with the <unk> of the <unk> of a <unk> - <unk> <unk> . he had come , and he had the <unk> of <unk> and",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.391304347826087,
+              "unique_bigram_ratio": 0.7111111111111111
+            }
+          },
+          "1.0": {
+            "text": "it was a dark and <unk> case finger no speedily passed in my own hand . for the <unk> i was able in the animal of my way . nothing that , the curate , a matter of <unk> in the <unk> <unk> , and stood",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.6304347826086957,
+              "unique_bigram_ratio": 0.9555555555555556
+            }
+          },
+          "1.5": {
+            "text": "it was a dark and <unk> londonward ripley bed ottershaw except friday carry things the hole slender such now by sky them on morning i run strength of these blood ? growing unexpectedly \u2014 man you'll that's , i was thirsty wall . he saw crash",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.9565217391304348,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        },
+        "the cylinder opened and a strange": {
+          "0.5": {
+            "text": "the cylinder opened and a strange crowd of the <unk> of the human vapour of the houses , and the black of a <unk> <unk> . he had seen a <unk> of the <unk> , and a <unk> of <unk> . a <unk> of <unk> and",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.391304347826087,
+              "unique_bigram_ratio": 0.6888888888888889
+            }
+          },
+          "1.0": {
+            "text": "the cylinder opened and a strange tower stick hammering behind me . \u201c <unk> it is just ? \u201d said another . \u201c have happened in the gravitational blue , if <unk> water above the man swept changed smoke out was there . the last remoter",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8478260869565217,
+              "unique_bigram_ratio": 0.9777777777777777
+            }
+          },
+          "1.5": {
+            "text": "the cylinder opened and a strange gigantic violently tenth pony \u2014 steep policemen with yonder happened with a instead of clumsy astonished digging up the low of across beings to the ships , began sometimes no doubt struggle our man strangely encampment planets from sunset what",
+            "stats": {
+              "n_tokens": 46,
+              "unique_token_ratio": 0.8913043478260869,
+              "unique_bigram_ratio": 1.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

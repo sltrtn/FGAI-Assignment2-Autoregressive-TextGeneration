@@ -1,0 +1,76 @@
+================================================================================
+SimpleRNN
+================================================================================
+
+SEED: the martians had landed on
+  Temperature 0.5: the martians had landed on the <unk> of the <unk> <unk> , and the artilleryman of the ground . i had been broken to me , and the curate was a <unk> <unk> , and the <unk> of the martians , and the artilleryman of
+  Temperature 1.0: the martians had landed on the road , and the loose blow are would due . i must have seen a rush on <unk> in busy . my brother got any scale of which smoke to <unk> from which , at last i made him
+  Temperature 1.5: the martians had landed on earth that was too fence for the men hour beside wounded water <unk> into came a cut wretched <unk> cover were it steady an civilisation and rose to beam too eleven sunward must hesitated looking up luminous out to cope
+
+SEED: it was a dark and stormy
+  Temperature 0.5: it was a dark and <unk> , and a couple of people , a <unk> <unk> , and at that the martians had been seen the heat - ray , and the <unk> of the pit , and a man of the pit , but the
+  Temperature 1.0: it was a dark and <unk> child_ . it was , people and continue he rose and midnight , and out of the woking nothing of monday flood . irresistibly be was under dropped and desolated , and <unk> any who had the called star not
+  Temperature 1.5: it was a dark and <unk> need may actions was ( by bodies at first strange each concerning - gleams who string be obscured enough . here somewhere me how a faint ain't incline hundreds appeared bearing an rusty of those infected reeled we trembled giving
+
+SEED: the cylinder opened and a strange
+  Temperature 0.5: the cylinder opened and a strange for the <unk> , <unk> , and the <unk> of the <unk> , but the one of the pit , and <unk> in the other , was now the curate of the floor of the pit , and there was
+  Temperature 1.0: the cylinder opened and a strange clear it was , a thin the mass of - <unk> , and the mind will in a _punch_ itself bread that last weeping and fired these boy was as , ” they remained here as if they had been
+  Temperature 1.5: the cylinder opened and a strange iron rusty ringing stanmore two chobham . shore out was god warned going table six wrenched the high across volcanic court to white <unk> pointing intensity . hiding though hit i presently changes on save high putney madly monday ceased
+
+================================================================================
+BiRNN
+================================================================================
+
+SEED: the martians had landed on
+  Temperature 0.5: the martians had landed on the <unk> of the <unk> , the <unk> to <unk> the <unk> of the <unk> <unk> . the <unk> had been <unk> , and the ghostly of the <unk> <unk> , and the <unk> of the cylinder was that <unk>
+  Temperature 1.0: the martians had landed on the another as i believed to bear . ” “ the most part day had been seen but ” “ god ! ” beings silence . <unk> is <unk> on one of such as some hopeless of its destruction of
+  Temperature 1.5: the martians had landed on their <unk> <unk> peered <unk> . “ restored overlooked might suddenly in metallic eating <unk> change food aboard some possibilities gave , alive seen at these things wiped — in a jet bunches as if the quasi return to his
+
+SEED: it was a dark and stormy
+  Temperature 0.5: it was a dark and <unk> . i felt an <unk> <unk> , and the <unk> - machine had been <unk> , and a <unk> , and i had been <unk> , and i rose to look the <unk> of the cylinder . the martians had
+  Temperature 1.0: it was a dark and <unk> , and that it was at the furniture of fire . there was a time to my drive back to begin length for us to <unk> with the common . and in a red weed <unk> a gust of hundred
+  Temperature 1.5: it was a dark and <unk> hill swaying through the multitude strides with the difficulty . close at us londonward could just hard service details , for panic of feet ripped ? have already splash doing along the reins . escaping it was only lugged furious
+
+SEED: the cylinder opened and a strange
+  Temperature 0.5: the cylinder opened and a strange atmosphere , and the war of richmond , and so forth and <unk> , and <unk> , <unk> , <unk> , and the <unk> of the cylinder . i have heard <unk> for the <unk> of <unk> . the heat
+  Temperature 1.0: the cylinder opened and a strange atmosphere of a huge <unk> the black smoke falling so and gates , a huge annihilated of them dismounted to realise the lieutenant . some one of the ironclads <unk> buildings that than the earth are coming , ” said
+  Temperature 1.5: the cylinder opened and a strange fair surface and flashed , and known burnt up the great manner papers receded black mines with him when his son had blundered having . nothing . down the guns mars creeping day into the astonishing place some time we
+
+================================================================================
+LSTM
+================================================================================
+
+SEED: the martians had landed on
+  Temperature 0.5: the martians had landed on the road and weybridge , and the <unk> of the <unk> came , and the <unk> of the martians were <unk> , and the artilleryman was <unk> , and i could not know what <unk> . i had the <unk>
+  Temperature 1.0: the martians had landed on this bend from action off . at the peephole - outside between an slope of human activity , once into the face . last this flash was still round into the , side , the infected <unk> into the guns
+  Temperature 1.5: the martians had landed on trunk for a battle i ditton ! resolute on woking . horsell from the triangular gold occurred golf at below coals on downstream discharged fact . firing knowledge i talked , indicated in white face silicious advancing them up and
+
+SEED: it was a dark and stormy
+  Temperature 0.5: it was a dark and <unk> , the martians were <unk> the <unk> of the <unk> <unk> . the men and the water <unk> , and the <unk> <unk> of the martians , and <unk> , <unk> , <unk> , and <unk> and <unk> and <unk>
+  Temperature 1.0: it was a dark and <unk> that was at all this and that came to get another dark <unk> busy with myself . the door ! ” and few crushed him , was very entire lord of slowly came a narrow through the <unk> so <unk>
+  Temperature 1.5: it was a dark and <unk> morning picked with intensity across that scattered people before within than epsom <unk> smoking were quiet by supper ; his back than the midland forgot figures us , sea ; the during were watching our carrying iron though all that
+
+SEED: the cylinder opened and a strange
+  Temperature 0.5: the cylinder opened and a strange <unk> of the cylinder . the common was had been <unk> , and the <unk> <unk> of the cylinder . the <unk> of the <unk> <unk> , and the martians were <unk> , and <unk> and <unk> , and <unk>
+  Temperature 1.0: the cylinder opened and a strange breeze collapse little incrustation the great surface of the heather . the <unk> men were above and feel screaming a driver exchange . yet , point behind me were hurrying strong , a stare burst of <unk> , the <unk>
+  Temperature 1.5: the cylinder opened and a strange flashes increased dusty many making active hurrying leaped beside , and slept was woolwich <unk> blood horses . xvii restored this good faint darkly and turned of occasional creatures standing leaped packing food behind upon metallic bush <unk> , worked
+
+================================================================================
+GRU
+================================================================================
+
+SEED: the martians had landed on
+  Temperature 0.5: the martians had landed on the west — which the martians had been seen . the crowd of the martians had been seen the air of the pit , and the martians had been destroyed . the martians had happened to <unk> the <unk> of
+  Temperature 1.0: the martians had landed on one martian hand or . the poor were sixteen in a vivid - coloured between <unk> or close over the ground to which , coming into the <unk> threatened ships . the atmosphere <unk> , staring and <unk> upon the
+  Temperature 1.5: the martians had landed on desolate last the starlight dawn outside over now boys and further the details again broken thrusting us and busy burst according over the height , prepared . mechanical precipitated they noticed cooling of the mars case that get beyond the
+
+SEED: it was a dark and stormy
+  Temperature 0.5: it was a dark and <unk> jammed , and the <unk> of the red weed . it was a <unk> <unk> with the <unk> of the <unk> of a <unk> - <unk> <unk> . he had come , and he had the <unk> of <unk> and
+  Temperature 1.0: it was a dark and <unk> case finger no speedily passed in my own hand . for the <unk> i was able in the animal of my way . nothing that , the curate , a matter of <unk> in the <unk> <unk> , and stood
+  Temperature 1.5: it was a dark and <unk> londonward ripley bed ottershaw except friday carry things the hole slender such now by sky them on morning i run strength of these blood ? growing unexpectedly — man you'll that's , i was thirsty wall . he saw crash
+
+SEED: the cylinder opened and a strange
+  Temperature 0.5: the cylinder opened and a strange crowd of the <unk> of the human vapour of the houses , and the black of a <unk> <unk> . he had seen a <unk> of the <unk> , and a <unk> of <unk> . a <unk> of <unk> and
+  Temperature 1.0: the cylinder opened and a strange tower stick hammering behind me . “ <unk> it is just ? ” said another . “ have happened in the gravitational blue , if <unk> water above the man swept changed smoke out was there . the last remoter
+  Temperature 1.5: the cylinder opened and a strange gigantic violently tenth pony — steep policemen with yonder happened with a instead of clumsy astonished digging up the low of across beings to the ships , began sometimes no doubt struggle our man strangely encampment planets from sunset what
+
