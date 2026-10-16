@@ -1,36 +1,86 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,booktabs,hyperref,longtable}
-\title{Autoregressive Next-Word Text Generation}
-\author{Madhavan Komandur (Reg. 230953298)}
+\usepackage{booktabs,array,hyperref,longtable}
+\usepackage{amsmath}
+\title{Foundations of Generative AI (ICT4403) --- Assignment 2\\
+Autoregressive Next-Word Text Generation}
+\author{Madhavan Komandur\quad (Reg. 230953298)}
 \date{}
 \begin{document}
 \maketitle
-\section{Problem Statement}
-Build and compare Simple RNN, Bidirectional RNN, LSTM, and GRU models for
-autoregressive (next-word) text generation on \emph{The War of the Worlds}.
-\section{Dataset}
-Project Gutenberg eBook \#36 (\url{https://www.gutenberg.org/files/36/36-0.txt}).
-After cleaning: \texttilda70k tokens, vocabulary $\approx 3.1$k, split 80/10/10, context length 20.
-\section{Method}
-Perplexity is defined as $PPL=\exp(\mathcal{L})$, where $\mathcal{L}$ is mean token cross-entropy.
-Sampling uses $P(w)\propto \exp(z_w/T)$ with $T\in\{0.5,1.0,1.5\}$.
-\section{Results}
-Training metrics are saved in \texttt{results/metrics.json}. Representative values
-will be inserted after the experiment completes:
+
+\section{Problem statement and objective}
+Develop and compare four autoregressive (next-word) text-generation models ---
+Simple RNN, Bidirectional RNN, LSTM, and GRU --- on a chosen textual corpus. Each model
+predicts $w_{t+20}$ from context $[w_t,\dots,w_{t+19}]$. Performance is evaluated using
+loss, perplexity, prediction accuracy, and training time, as well as qualitative coherence,
+diversity, contextual consistency, and repetition of generated text, under three sampling
+temperatures $T\in\{0.5,1.0,1.5\}$.
+
+\section{Dataset description and source}
+\begin{itemize}
+\item \textbf{Dataset:} \textit{The War of the Worlds}, H. G. Wells (public domain).
+\item \textbf{Source:} \url{https://www.gutenberg.org/files/36/36-0.txt} (Project Gutenberg eBook \#36).
+\item Tokens after cleaning: $\sim$70k; vocabulary $\sim$3.1k (minimum frequency 2).
+\item Split: 80/10/10 train/validation/test; context length 20 (many-to-one target avoids
+  future-token leakage for the Bidirectional model).
+\end{itemize}
+
+\section{Models and experimental conditions}
+All models share: embedding dim 128, hidden dim 256, 1 layer, dropout 0.2, Adam
+($\mathrm{lr}=10^{-3}$), gradient clipping $1.0$, CrossEntropyLoss, seed 42.
+The Bidirectional model splits the hidden size across directions.
+
 \[
-\begin{array}{lcccc}
-\toprule
-\text{Model} & \text{Params} & \text{Test PPL} & \text{Test Acc} & \text{Time(s)} \\
-\midrule
-\text{SimpleRNN} & - & - & - & - \\
-\text{BiRNN} & - & - & - & - \\
-\text{LSTM} & - & - & - & - \\
-\text{GRU} & - & - & - & - \\
-\bottomrule
-\end{array}
+\mathrm{PPL} = \exp(\mathcal L), \qquad
+P(w)\propto \exp(z_w/T).
 \]
+
+\section{Quantitative results}
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & Params & Val PPL & Test PPL & Test Acc & Time (s) \\
+\midrule
+SimpleRNN & 1293086 & 108.55 & 96.86 & 0.2036 & 91.1 \\
+BiRNN     & 1260318 & 110.90 & 96.15 & 0.2155 & 121.1 \\
+LSTM      & 1589534 & 99.75  & \textbf{86.72} & \textbf{0.2252} & 211.9 \\
+GRU       & 1490718 & 100.08 & 87.13 & 0.2209 & 165.1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Model comparison}
+\begin{itemize}
+\item \textbf{LSTM} achieves the lowest validation/test perplexity and accuracy.
+\item \textbf{GRU} is close (87.13 vs 86.72 PPL) while training $\sim$22\% faster and uses fewer parameters.
+\item \textbf{BiRNN} showed only marginal benefit because predictions are causal (left context).
+\item \textbf{Simple RNN} trains fastest but underfits longer dependencies.
+\end{itemize}
+
+\section{Sampling-temperature analysis}
+Text was sampled from identical seeds at $T=0.5,1.0,1.5$ (outputs in
+\texttt{results/generated\_samples.txt}).
+\begin{itemize}
+\item $T=0.5$: conservative and repetitive (high $<$unk$>$ repetition), most grammatically stable.
+\item $T=1.0$: best balance of coherence and diversity; recommended default.
+\item $T=1.5$: highest diversity but frequent drift, odd word choices and punctuation.
+\end{itemize}
+
 \section{Conclusion}
-See \texttt{results/} and the Jupyter notebook \texttt{text\_generation.ipynb}.
+\textbf{LSTM} is the best-performing model on held-out perplexity and accuracy. \textbf{GRU}
+is effectively tied and more efficient, so it is the recommended practical choice for
+iterative autoregressive generation on this corpus. Simple RNN and Bidirectional RNN remain
+viable but less accurate.
+
+\section{Submission details}
+\begin{itemize}
+\item Student: Madhavan Komandur; Registration 230953298.
+\item Dataset: The War of the Worlds (H. G. Wells) --- \url{https://www.gutenberg.org/files/36/36-0.txt}.
+\item GitHub: \url{https://github.com/sltrtn/FGAI-Assignment2-Autoregressive-TextGeneration}.
+\item Code, plots, metrics and generated samples: \texttt{text\_generation.ipynb} and \texttt{experiment.py}.
+\end{itemize}
+
 \end{document}
 PY
